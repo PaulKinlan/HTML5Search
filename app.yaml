@@ -16,6 +16,10 @@ handlers:
   static_files: static/index.html
   upload: static/index\.html
   
+- url: /sites.html
+  static_files: static/sites.html
+  upload: static/sites\.html
+  
 - url: /opensearch.xml
   static_files: static/opensearch.xml
   mime_type: application/opensearchdescription+xml
