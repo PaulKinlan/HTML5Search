@@ -1,0 +1,30 @@
+application: html5search
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+  
+- url: /
+  static_files: static/index.html
+  upload: static/index\.html
+  
+- url: /index.html
+  static_files: static/index.html
+  upload: static/index\.html
+  
+- url: /opensearch.xml
+  static_files: static/opensearch.xml
+  mime_type: application/opensearchdescription+xml
+  upload: static/opensearch.xml
+  
+- url: /scripts
+  static_dir: scripts
+  mime_type: application/javascript
+  
+- url: /search/.*
+  static_files: static/index.html
+  upload: static/index\.html5search

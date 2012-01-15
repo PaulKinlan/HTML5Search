@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+   <ShortName>HTML5 Search</ShortName>
+   <Description>Searches only the best HTML5, JS and CSS sites on the web.</Description>
+   <Tags>html5 html css js css3 web</Tags>
+   <Contact>paul.kinlan@gmail.com</Contact>
+   <Url type="text/html" 
+        template="http://www.html5search.com/search/{searchTerms}"/>
+ </OpenSearchDescription>
