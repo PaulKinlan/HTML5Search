@@ -189,7 +189,7 @@ body {
     
     <!-- Place this tag where you want the +1 button to render -->
     <div class="outer">
-      <div class="g-plusone" data-size="medium" data-annotation="inline"></div>
+      <div id="plusonediv" class="g-plusone" data-size="medium" data-annotation="inline"></div>
     </div>
     <div id="cse" style="width: 100%;">
       HTML5 Search Engine - searching all the best resources for HTML5, JS and CSS.
@@ -214,7 +214,8 @@ body {
       var description = document.getElementById("description");
       name.content = "HTML5 Search Results: " + q;
       description.content = "The best results on the web for '" + q + "'.";
-      
+      debugger;
+      gapi.plusone.render("plusonediv", {"size":"medium", "href": document.location.href, "annotation": "inline"});
     })
     var app = new routes();
 
@@ -224,7 +225,8 @@ body {
       csc.execute(decodeURI(query));
     });
     }, true);
-    </script><script type="text/javascript">
+    </script>
+    <script type="text/javascript">
 
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-28238845-1']);
@@ -236,14 +238,11 @@ body {
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
     </script>
-    <script type="text/javascript">
-window.___gcfg = {lang: 'en-GB'};
-    (function() 
-    {var po = document.createElement("script");
-    po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(po, s);
-    })();
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+          {"parsetags": "explicit"}
+    </script>
+    <script>
+      gapi.plusone.render("plusonediv", {size:"medium", "annotation": "inline"});
     </script>
   </body>
 </html>
