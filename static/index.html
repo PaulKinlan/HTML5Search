@@ -11,10 +11,12 @@
     <link href="https://plus.google.com/104909850031486794919" rel="publisher">
     <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css">
     <style type="text/css">
-body {
-    margin: 0;
+    body {
+      margin: 0;
     }
-    
+    a {
+      color: navy;
+    }
     .outer {
       padding: 10px 10px 0 10px;
       background: #eee;
@@ -31,7 +33,7 @@ body {
 
     form.gsc-search-box {
     background: #eee;
-    -webkit-box-shadow: 0px 5px 5px #555;
+    -webkit-box-shadow: 0px 3px 10px #ccc;
     margin-bottom: 5px;
     padding: 10px;
     box-sizing: border-box;
@@ -53,9 +55,18 @@ body {
     }
 
     input.gsc-input {
-    border-color: #BCCDF0;
-    font-size: 2em;
-    background-image: none !important;
+      border-color: #BCCDF0;
+      font-size: 2em;
+      background-image: none !important;
+      padding: 0.5em !important;
+      border-radius: 10px;
+      color: #555;
+      box-sizing: border-box;
+      outline: none;
+    }
+    input.gsc-input:hover {
+      color: black;
+      border-color: black;
     }
     input.gsc-search-button {
     border-color: #666666;
@@ -194,8 +205,8 @@ body {
     <div id="cse" style="width: 100%;">
       HTML5 Search Engine - searching all the best resources for HTML5, JS and CSS.
     </div>
-    <div>
-      All the sites being indexed can be found at <a href="/sites.html">http://www.html5search.com/sites.html</a>
+    <div style="text-align:center;margin-top:1em;color:#ccc;">
+      All the sites being indexed can be found at <a href="/sites.html">html5search.com/sites.html</a>
     </div>
     <script src="http://www.google.com/jsapi" type="text/javascript"></script>
     <script type="text/javascript">
@@ -214,7 +225,7 @@ body {
       var description = document.getElementById("description");
       name.content = "HTML5 Search Results: " + q;
       description.content = "The best results on the web for '" + q + "'.";
-      debugger;
+      //debugger;
       gapi.plusone.render("plusonediv", {"size":"medium", "href": document.location.href, "annotation": "inline"});
     })
     var app = new routes();
