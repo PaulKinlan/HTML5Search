@@ -222,6 +222,7 @@
     csc.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
     csc.draw('cse');
     csc.input.focus(); // [autofocus] equivalent
+    csc.input.setAttribute('x-webkit-speech', "true");
     csc.setSearchStartingCallback(undefined, function(a,b,q) {
       window.history.pushState(q, 'Results for ' + q, '/search/' + q);
       // Update the meta content elements.  This might need to be done on the server in the future.
