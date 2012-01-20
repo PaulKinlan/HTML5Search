@@ -205,9 +205,12 @@
     <div id="cse" style="width: 100%;">
       HTML5 Search Engine - searching all the best resources for HTML5, JS and CSS.
     </div>
-    <div style="text-align:center;margin-top:1em;color:#ccc;">
+    <p style="text-align:center;margin-top:1em;color:#ccc;">
       All the sites being indexed can be found at <a href="/sites.html">html5search.com/sites.html</a>
-    </div>
+    </p>
+    <p style="text-align:center;">
+        <a href="https://github.com/PaulKinlan/HTML5Search">Fork this site</a>
+    </p>
     <script src="http://www.google.com/jsapi" type="text/javascript"></script>
     <script type="text/javascript">
 
@@ -218,6 +221,7 @@
 
     csc.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
     csc.draw('cse');
+    csc.input.focus(); // [autofocus] equivalent
     csc.setSearchStartingCallback(undefined, function(a,b,q) {
       window.history.pushState(q, 'Results for ' + q, '/search/' + q);
       // Update the meta content elements.  This might need to be done on the server in the future.
